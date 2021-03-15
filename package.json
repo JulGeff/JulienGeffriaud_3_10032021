@@ -1,0 +1,17 @@
+{
+  "name": "p3_ohmyfood",
+  "version": "1.0.0",
+  "description": "Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:.public/css/style.css -w --style expanded",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulGeff/JulienGeffriaud_3_10032021.git"
+  },
+  "author": "Julien Geffriaud",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+}
