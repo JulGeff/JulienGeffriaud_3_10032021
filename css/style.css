@@ -20,7 +20,7 @@
   font-weight: normal;
   font-style: normal;
 }
-/*déclaration variables*/
+/*variables*/
 body {
   margin: 0;
 }
@@ -32,7 +32,7 @@ header {
   text-align: center;
 }
 header img {
-  width: 60%;
+  width: 100%;
 }
 header svg {
   width: 10px;
@@ -49,7 +49,7 @@ header div:last-of-type {
 }
 header a {
   color: white;
-  background: linear-gradient(160deg, #eb73da, #a25bd9);
+  background: linear-gradient(160deg, #FF79DA, #9356DC);
   border-radius: 50px;
   padding: 5%;
   box-shadow: 1px 1px 20px #c0bfbf;
@@ -84,12 +84,13 @@ a {
   background-color: #f6f6f6;
 }
 
-/*mise en forme encarts restaurants*/
+/*Accueil - mise en forme encarts restaurants*/
 .insert {
   margin-top: 10%;
   margin-bottom: 10%;
   border-radius: 11px;
   box-shadow: 1px 1px 20px #c0bfbf;
+  background-color: white;
 }
 .insert__img {
   width: 100%;
@@ -112,16 +113,6 @@ a {
   width: 20px;
 }
 
-.block {
-  background-color: #15DEA5;
-}
-.block__element {
-  color: #fff;
-}
-.block__element--modifier {
-  background-color: #001534;
-}
-
 footer {
   padding: 5%;
   background-color: #353535;
@@ -141,13 +132,44 @@ footer a {
   color: white;
 }
 
-/*mise en forme pages menus*/
+/*fonts*/
 h1 {
   font-family: "shrikhandregular";
 }
 
-h2, h3, p {
+:not(h1) {
   font-family: "robotoregular";
+}
+
+/*4 pages menus*/
+.menu {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.menu ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.menu div {
+  display: flex;
+  justify-content: space-between;
+}
+.menu li {
+  box-shadow: 1px 1px 20px #c0bfbf;
+  border-radius: 11px;
+  margin-top: 5%;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+.menu h3, .menu p {
+  margin: 0;
+}
+.menu a {
+  color: white;
+  background: linear-gradient(160deg, #FF79DA, #9356DC);
+  border-radius: 50px;
+  padding: 5%;
+  box-shadow: 1px 1px 20px #c0bfbf;
 }
 
 /*# sourceMappingURL=style.css.map */
