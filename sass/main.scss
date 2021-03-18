@@ -1,0 +1,328 @@
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.eot');
+    src: url('../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.woff') format('woff'),
+         url('../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.ttf') format('truetype'),
+         url('../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.svg#shrikhandregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-fontfacekit/roboto_regular_macroman/Roboto-Regular-webfont.eot');
+    src: url('../fonts/roboto-fontfacekit/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-fontfacekit/roboto_regular_macroman/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/roboto-fontfacekit/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-fontfacekit/roboto_regular_macroman/Roboto-Regular-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.eot');
+    src: url('../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.woff') format('woff'),
+         url('../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*variables*/
+
+$dark-grey: #353535;
+$mid-grey: #eaeaea;
+$light-grey: #f6f6f6;
+
+$color-primary: #FF79DA;
+$color-secondary: #9356DC;
+$color-tertiary: #99E2D0;
+
+$margin-padding-default: 5%;
+$button-shadow: 1px 1px 20px #c0bfbf;
+$radius: 11px;
+
+$font-size-normal: 1.1rem;
+$font-size-small: .9rem;
+$font-size-big: 1.6rem;
+
+
+body {
+    margin:0;
+
+}
+
+#index_header {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+
+    img {
+    width: 100%;
+
+    }
+    
+    svg {
+    width: 10px;
+
+    }
+
+    div:first-of-type {
+    display: flex;
+    background-color: $mid-grey;
+    justify-content: center;
+    width: 100%;
+   
+
+    }
+
+    div:last-of-type {
+        background-color: $light-grey;
+        padding: $margin-padding-default;  
+    
+        }
+
+    a {
+    color: white;
+    background: linear-gradient(160deg, $color-primary, $color-secondary);
+    border-radius: 50px; 
+    padding: $margin-padding-default;
+    box-shadow: $button-shadow;
+
+}
+}
+
+
+
+
+
+/*Habillage liens pour qu'ils ne changent pas de couleur après avoir été visités*/
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#fonctionnement
+{
+    svg
+    {
+        width: 15px;
+        padding-left: $margin-padding-default;
+
+    }
+
+    li{
+        display: flex;
+        background-color: $light-grey;
+        margin: $margin-padding-default;
+        box-shadow: $button-shadow;
+        border-radius: 10px; 
+
+    }
+
+    h3 {
+        padding-left: $margin-padding-default;
+    }
+   
+}
+
+
+#restaurants, #fonctionnement {
+    padding: $margin-padding-default;
+
+}
+
+#restaurants {
+    background-color: $light-grey;
+}
+
+
+
+
+/*Accueil - mise en forme encarts restaurants*/
+.insert {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-radius: $radius;
+    box-shadow: $button-shadow;
+    background-color: white;
+
+    &__img {
+        width:100%;
+        border-radius: $radius $radius 0px 0px;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    &__txtblock {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    h3, p {
+        margin: 0;
+
+    }
+
+    svg {
+        width: 20px; 
+    }
+}
+
+
+ footer {
+    padding: $margin-padding-default;
+    background-color: $dark-grey;
+    color: white;
+    
+
+    img {
+    width: 25%;
+    }
+
+    svg {
+        width:10px;
+    }
+
+    ul {
+    list-style-type: none;
+    padding-left: 0;
+    }
+
+    a
+    {
+        color: white;
+    }
+
+
+}
+
+
+/*fonts*/
+
+h1{
+    font-family: 'shrikhandregular';
+    font-size: $font-size-big;
+    margin:0;
+}
+
+:not(h1){
+    font-family: 'robotoregular';
+}
+
+
+/*4 pages menus*/
+
+.menu, .menu_footer {
+    position: relative;
+    top:-30px;
+}
+
+.menu
+{
+    background-color: $light-grey;
+    padding: $margin-padding-default * 2 $margin-padding-default $margin-padding-default $margin-padding-default;
+    border-radius: 40px 40px 0 0;
+    &_header {
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 2%;
+            padding-bottom: 2%;
+        }
+    
+        img {
+            height: 280px;
+            width: 100%;
+            object-fit: cover;
+        }
+    
+
+        svg {
+            width: 20px;
+            position: absolute;
+            left: 10px;
+        }
+        
+       
+    }  
+    
+    div:first-of-type
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        svg
+        {
+            width: 30px;
+            height: 30px;
+            padding-right: 3%;
+        }
+
+    }
+
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        background-color: white;
+        
+       
+        }
+
+    li {
+        box-shadow: $button-shadow;
+        border-radius: $radius; 
+        margin-top: $margin-padding-default;
+        padding-right: $margin-padding-default;
+        padding-left: $margin-padding-default;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }    
+
+    h3, p {
+        margin: 0;
+        font-size: $font-size-small;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: $font-size-normal;
+        font-weight: normal;
+    }
+
+    a {
+        color: white;
+        background: linear-gradient(160deg, $color-primary, $color-secondary);
+        border-radius: 50px; 
+        padding: $margin-padding-default;
+        box-shadow: $button-shadow;
+        display: block;
+        text-align:center;
+        margin: 15% 20% 15% 20%;
+        
+    }   
+
+
+}
