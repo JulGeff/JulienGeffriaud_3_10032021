@@ -21,10 +21,26 @@
   font-style: normal;
 }
 /*variables*/
+/*fonts*/
+h1 {
+  font-family: "shrikhandregular";
+}
+
+:not(h1) {
+  font-family: "robotoregular";
+}
+
 body {
   margin: 0;
 }
 
+/*Habillage liens pour qu'ils ne changent pas de couleur après avoir été visités*/
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*Page d'accueil*/
 #index_header {
   display: flex;
   flex-direction: column;
@@ -43,9 +59,16 @@ body {
   justify-content: center;
   width: 100%;
 }
+#index_header div:first-of-type p {
+  padding-left: 5%;
+  font-weight: bold;
+}
 #index_header div:last-of-type {
   background-color: #f6f6f6;
-  padding: 5%;
+  padding: 5% 5% 15% 5%;
+}
+#index_header div:last-of-type h3 {
+  padding-bottom: 5%;
 }
 #index_header a {
   color: white;
@@ -53,12 +76,6 @@ body {
   border-radius: 50px;
   padding: 5%;
   box-shadow: 1px 1px 20px #c0bfbf;
-}
-
-/*Habillage liens pour qu'ils ne changent pas de couleur après avoir été visités*/
-a {
-  text-decoration: none;
-  color: black;
 }
 
 #fonctionnement svg {
@@ -83,8 +100,12 @@ a {
 #restaurants {
   background-color: #f6f6f6;
 }
+#restaurants svg {
+  width: 25px;
+  height: 25px;
+}
 
-/*Accueil - mise en forme encarts restaurants*/
+/*mise en forme encarts restaurants*/
 .insert {
   margin-top: 10%;
   margin-bottom: 10%;
@@ -105,6 +126,8 @@ a {
   align-items: center;
   padding-left: 5%;
   padding-right: 5%;
+  padding-bottom: 2%;
+  padding-top: 2%;
 }
 .insert h3, .insert p {
   margin: 0;
@@ -113,6 +136,7 @@ a {
   width: 20px;
 }
 
+/*footer toutes pages*/
 footer {
   padding: 5%;
   background-color: #353535;
@@ -128,22 +152,14 @@ footer ul {
   list-style-type: none;
   padding-left: 0;
 }
+footer ul li {
+  padding-bottom: 5px;
+}
 footer a {
   color: white;
 }
 
-/*fonts*/
-h1 {
-  font-family: "shrikhandregular";
-  font-size: 1.6rem;
-  margin: 0;
-}
-
-:not(h1) {
-  font-family: "robotoregular";
-}
-
-/*4 pages menus*/
+/*Pages menus*/
 .menu, .menu_footer {
   position: relative;
   top: -30px;
@@ -184,16 +200,16 @@ h1 {
 .menu ul {
   list-style-type: none;
   padding-left: 0;
-  background-color: white;
 }
 .menu li {
+  background-color: white;
   box-shadow: 1px 1px 20px #c0bfbf;
   border-radius: 11px;
-  margin-top: 5%;
+  margin-top: 3.3333333333%;
   padding-right: 5%;
   padding-left: 5%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 .menu h3, .menu p {
   margin: 0;
