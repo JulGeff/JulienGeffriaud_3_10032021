@@ -21,6 +21,7 @@
   font-style: normal;
 }
 /*variables*/
+/*mixins*/
 /*fonts*/
 h1 {
   font-family: "shrikhandregular";
@@ -71,23 +72,45 @@ a {
   padding-bottom: 5%;
 }
 #index_header a {
+  /*mise en forme boutons + éclaircissement au survol*/
   color: white;
   background: linear-gradient(160deg, #FF79DA, #9356DC);
   border-radius: 50px;
   padding: 5%;
-  box-shadow: 1px 1px 20px #c0bfbf;
+  box-shadow: 1px 1px 10px #c0bfbf;
+}
+#index_header a:hover {
+  background: linear-gradient(160deg, #ff93e1, #a16be0);
+  box-shadow: 1px 1px 30px #9b9b9b;
 }
 
 #fonctionnement svg {
-  width: 15px;
+  height: 15px;
   padding-left: 5%;
 }
-#fonctionnement li {
+#fonctionnement ol {
+  counter-reset: counter;
+  padding-left: 0;
+}
+#fonctionnement ol li {
   display: flex;
+  align-items: center;
   background-color: #f6f6f6;
   margin: 5%;
-  box-shadow: 1px 1px 20px #c0bfbf;
-  border-radius: 10px;
+  box-shadow: 1px 1px 10px #c0bfbf;
+  border-radius: 20px;
+  counter-increment: counter;
+}
+#fonctionnement ol li:before {
+  content: counter(counter);
+  color: white;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  background-color: #9356DC;
+  position: relative;
+  right: 10px;
 }
 #fonctionnement h3 {
   padding-left: 5%;
@@ -110,10 +133,23 @@ a {
   margin-top: 10%;
   margin-bottom: 10%;
   border-radius: 11px;
-  box-shadow: 1px 1px 20px #c0bfbf;
+  box-shadow: 1px 1px 10px #c0bfbf;
   background-color: white;
 }
-.insert__img {
+.insert__pic {
+  position: relative;
+}
+.insert__pic p {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 6px 15px 6px 15px;
+  background-color: #99E2D0;
+  color: #278870;
+  font-weight: bold;
+  border-radius: 2px;
+}
+.insert__pic__img {
   width: 100%;
   border-radius: 11px 11px 0px 0px;
   height: 150px;
@@ -162,7 +198,7 @@ footer a {
 /*Pages menus*/
 .menu, .menu_footer {
   position: relative;
-  top: -30px;
+  top: -40px;
 }
 
 .menu {
@@ -170,12 +206,12 @@ footer a {
   padding: 10% 5% 5% 5%;
   border-radius: 40px 40px 0 0;
 }
+.menu_header {
+  position: relative;
+}
 .menu_header div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  display: block;
+  text-align: center;
 }
 .menu_header img {
   height: 280px;
@@ -185,7 +221,17 @@ footer a {
 .menu_header svg {
   width: 20px;
   position: absolute;
-  left: 10px;
+  top: 6px;
+  left: 20px;
+}
+.menu__parts {
+  position: relative;
+}
+.menu__parts .underline {
+  position: absolute;
+  top: 25px;
+  width: 40px;
+  border: solid 2px #99E2D0;
 }
 .menu div:first-of-type {
   display: flex;
@@ -203,7 +249,7 @@ footer a {
 }
 .menu li {
   background-color: white;
-  box-shadow: 1px 1px 20px #c0bfbf;
+  box-shadow: 1px 1px 10px #c0bfbf;
   border-radius: 11px;
   margin-top: 3.3333333333%;
   padding-right: 5%;
@@ -221,14 +267,19 @@ footer a {
   font-weight: normal;
 }
 .menu a {
+  /*mise en forme boutons + éclaircissement au survol*/
   color: white;
   background: linear-gradient(160deg, #FF79DA, #9356DC);
   border-radius: 50px;
   padding: 5%;
-  box-shadow: 1px 1px 20px #c0bfbf;
+  box-shadow: 1px 1px 10px #c0bfbf;
   display: block;
   text-align: center;
   margin: 15% 20% 15% 20%;
+}
+.menu a:hover {
+  background: linear-gradient(160deg, #ff93e1, #a16be0);
+  box-shadow: 1px 1px 30px #9b9b9b;
 }
 
 /*# sourceMappingURL=style.css.map */
