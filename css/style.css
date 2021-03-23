@@ -41,7 +41,30 @@ a {
   color: black;
 }
 
-/*Page d'accueil*/
+/*Footer all pages*/
+footer {
+  padding: 5%;
+  background-color: #353535;
+  color: white;
+}
+footer img {
+  width: 25%;
+}
+footer svg {
+  width: 10px;
+}
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+footer ul li {
+  padding-bottom: 5px;
+}
+footer a {
+  color: white;
+}
+
+/*Page d'accueil / Index*/
 #index_header {
   display: flex;
   flex-direction: column;
@@ -78,10 +101,25 @@ a {
   border-radius: 50px;
   padding: 5%;
   box-shadow: 1px 1px 10px #c0bfbf;
+  z-index: 1;
+  position: relative;
 }
-#index_header a:hover {
-  background: linear-gradient(160deg, #ff93e1, #a16be0);
+#index_header a:hover::after {
+  opacity: 1;
+}
+#index_header a::after {
+  content: "";
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(160deg, #ff8de0, #9e67e0);
   box-shadow: 1px 1px 30px #9b9b9b;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 200ms;
 }
 
 #fonctionnement svg {
@@ -101,7 +139,7 @@ a {
   border-radius: 20px;
   counter-increment: counter;
 }
-#fonctionnement ol li:before {
+#fonctionnement ol li::before {
   content: counter(counter);
   color: white;
   border-radius: 50%;
@@ -116,16 +154,16 @@ a {
   padding-left: 5%;
 }
 
-#restaurants, #fonctionnement {
-  padding: 5%;
-}
-
 #restaurants {
   background-color: #f6f6f6;
 }
 #restaurants svg {
   width: 25px;
   height: 25px;
+}
+
+#restaurants, #fonctionnement {
+  padding: 5%;
 }
 
 /*mise en forme encarts restaurants*/
@@ -172,31 +210,9 @@ a {
   width: 20px;
 }
 
-/*footer toutes pages*/
-footer {
-  padding: 5%;
-  background-color: #353535;
-  color: white;
-}
-footer img {
-  width: 25%;
-}
-footer svg {
-  width: 10px;
-}
-footer ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-footer ul li {
-  padding-bottom: 5px;
-}
-footer a {
-  color: white;
-}
-
 /*Pages menus*/
 .menu, .menu_footer {
+  /*décalage du menu vers le haut pour chevaucher la photo du header*/
   position: relative;
   top: -40px;
 }
@@ -273,13 +289,28 @@ footer a {
   border-radius: 50px;
   padding: 5%;
   box-shadow: 1px 1px 10px #c0bfbf;
+  z-index: 1;
+  position: relative;
   display: block;
   text-align: center;
   margin: 15% 20% 15% 20%;
 }
-.menu a:hover {
-  background: linear-gradient(160deg, #ff93e1, #a16be0);
+.menu a:hover::after {
+  opacity: 1;
+}
+.menu a::after {
+  content: "";
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(160deg, #ff8de0, #9e67e0);
   box-shadow: 1px 1px 30px #9b9b9b;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 200ms;
 }
 
 /*# sourceMappingURL=style.css.map */
