@@ -56,6 +56,9 @@ $font-size-normal: 1.1rem;
 $font-size-small: 0.9rem;
 $font-size-big: 1.6rem;
 
+$anim-duration : 1s;
+$anim-delay: .5s;
+
 /*mixins*/
 
 @mixin button {
@@ -114,10 +117,27 @@ $font-size-big: 1.6rem;
     }
 }
 
+@keyframes menu-intro {
+
+0% {
+    opacity: 0;
+    top: 20px;
+}
+
+  100% { 
+    opacity: 1;
+    top: 0px;
+ }
+
+}
+
+
+
 /*fonts*/
 
-h1 {
+h1, footer h3 {
     font-family: "shrikhandregular";
+    
 }
 
 :not(h1) {
@@ -312,6 +332,7 @@ footer {
 }
 
 .menu {
+   
     background-color: $light-grey;
     padding: $margin-padding-default * 2 $margin-padding-default $margin-padding-default $margin-padding-default;
     border-radius: 40px 40px 0 0;
@@ -338,12 +359,21 @@ footer {
     }
 
     &__parts {
+        animation: menu-intro $anim-duration backwards;
         position: relative;
+        @for $i from 1 through 3 {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+             }
+        }
+        
         .underline {
             position: absolute;
             top: 25px;
             width: 40px;
             border: solid 2px $color-tertiary;
+
+            
         }
     }
 
@@ -358,11 +388,14 @@ footer {
     }
 
     ul {
+        
         list-style-type: none;
         padding-left: 0;
+        
     }
 
     li {
+        
         background-color: white;
         box-shadow: $button-shadow;
         border-radius: $radius;
@@ -371,6 +404,7 @@ footer {
         padding-left: $margin-padding-default;
         padding-top: 3%;
         padding-bottom: 3%;
+        
     }
 
     h3,
@@ -386,6 +420,7 @@ footer {
     }
 
     a {
+        
         @include button;
         display: block;
         text-align: center;

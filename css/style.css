@@ -28,8 +28,18 @@
     fill: rgba(255, 0, 0, 0.637);
   }
 }
+@keyframes menu-intro {
+  0% {
+    opacity: 0;
+    top: 20px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
 /*fonts*/
-h1 {
+h1, footer h3 {
   font-family: "shrikhandregular";
 }
 
@@ -261,7 +271,17 @@ footer a {
   left: 20px;
 }
 .menu__parts {
+  animation: menu-intro 1s backwards;
   position: relative;
+}
+.menu__parts--1 {
+  animation-delay: 0.5s;
+}
+.menu__parts--2 {
+  animation-delay: 1s;
+}
+.menu__parts--3 {
+  animation-delay: 1.5s;
 }
 .menu__parts .underline {
   position: absolute;
