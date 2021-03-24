@@ -1,43 +1,39 @@
 @font-face {
-    font-family: 'shrikhandregular';
-    src: url('../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.eot');
-    src: url('../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.woff2') format('woff2'),
-         url('../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.woff') format('woff'),
-         url('../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.ttf') format('truetype'),
-         url('../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.svg#shrikhandregular') format('svg');
+    font-family: "shrikhandregular";
+    src: url("../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.eot");
+    src: url("../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.woff2") format("woff2"),
+        url("../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.woff") format("woff"),
+        url("../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.ttf") format("truetype"),
+        url("../fonts/shrikhand-fonfacekit/shrikhand-regular-webfont.svg#shrikhandregular") format("svg");
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
-    font-family: 'robotoregular';
-    src: url('../fonts/roboto-fontfacekit/roboto_regular_macroman/Roboto-Regular-webfont.eot');
-    src: url('../fonts/roboto-fontfacekit/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/roboto-fontfacekit/roboto_regular_macroman/Roboto-Regular-webfont.woff') format('woff'),
-         url('../fonts/roboto-fontfacekit/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype'),
-         url('../fonts/roboto-fontfacekit/roboto_regular_macroman/Roboto-Regular-webfont.svg') format('svg');
+    font-family: "robotoregular";
+    src: url("../fonts/roboto-fontfacekit/roboto_regular_macroman/Roboto-Regular-webfont.eot");
+    src: url("../fonts/roboto-fontfacekit/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/roboto-fontfacekit/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff"),
+        url("../fonts/roboto-fontfacekit/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype"),
+        url("../fonts/roboto-fontfacekit/roboto_regular_macroman/Roboto-Regular-webfont.svg") format("svg");
     font-weight: normal;
     font-style: normal;
-
 }
-
-
 
 @font-face {
-    font-family: 'robotobold';
-    src: url('../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.eot');
-    src: url('../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.woff2') format('woff2'),
-         url('../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.woff') format('woff'),
-         url('../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.ttf') format('truetype'),
-         url('../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.svg#robotobold') format('svg');
+    font-family: "robotobold";
+    src: url("../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.eot");
+    src: url("../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.woff2") format("woff2"),
+        url("../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.woff") format("woff"),
+        url("../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.ttf") format("truetype"),
+        url("../fonts/roboto-fontfacekit/roboto_bold_macroman/Roboto-Bold-webfont.svg#robotobold") format("svg");
     font-weight: normal;
     font-style: normal;
-
 }
-
 
 /*variables*/
 
@@ -45,70 +41,92 @@ $dark-grey: #353535;
 $mid-grey: #eaeaea;
 $light-grey: #f6f6f6;
 
-$color-primary: #FF79DA;
-$color-secondary: #9356DC;
-$color-tertiary: #99E2D0;
+$color-primary: #ff79da;
+$color-secondary: #9356dc;
+$color-tertiary: #99e2d0;
+$lighten-percentage: 4%;
 
 $margin-padding-default: 5%;
-$button-shadow: 1px 1px 20px #c0bfbf;
+$button-shadow: 1px 1px 10px #c0bfbf;
+$button-shadow-plus: 1px 1px 30px #9b9b9b;
 $radius: 11px;
+$big-radius: 50px;
 
 $font-size-normal: 1.1rem;
-$font-size-small: .9rem;
+$font-size-small: 0.9rem;
 $font-size-big: 1.6rem;
 
+/*mixins*/
 
-body {
-    margin:0;
-
-}
-
-#index_header {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    
-
-    img {
-    width: 100%;
-
-    }
-    
-    svg {
-    width: 10px;
-
-    }
-
-    div:first-of-type {
-    display: flex;
-    background-color: $mid-grey;
-    justify-content: center;
-    width: 100%;
-   
-
-    }
-
-    div:last-of-type {
-        background-color: $light-grey;
-        padding: $margin-padding-default;  
-    
-        }
-
-    a {
+@mixin button {
+    /*mise en forme boutons + éclaircissement au survol*/
     color: white;
     background: linear-gradient(160deg, $color-primary, $color-secondary);
-    border-radius: 50px; 
+    border-radius: $big-radius;
     padding: $margin-padding-default;
     box-shadow: $button-shadow;
-
+    z-index: 1;
+    position: relative;
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "";
+        border-radius: $big-radius;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(
+            160deg,
+            lighten($color-primary, $lighten-percentage),
+            lighten($color-secondary, $lighten-percentage)
+        );
+        box-shadow: $button-shadow-plus;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 200ms;
+    }
 }
+
+@mixin heart {
+    /*mise en forme coeurs + remplissage rouge au survol*/
+    width: 30px;
+    height: 30px;
+    padding-right: 3%;
+    stroke-width: 3%;
+    stroke: black;
+    fill: currentColor;
+    position: relative;
+    z-index: 1;
+    &:hover {
+        animation: heart-fill 1s ease-out forwards;
+    }
 }
 
+/*Keyframes*/
+@keyframes heart-fill {
+    100% {
+        fill: rgba(255, 0, 0, 0.637);
+    }
+}
 
+/*fonts*/
 
+h1 {
+    font-family: "shrikhandregular";
+}
 
+:not(h1) {
+    font-family: "robotoregular";
+}
+
+body {
+    margin: 0;
+}
 
 /*Habillage liens pour qu'ils ne changent pas de couleur après avoir été visités*/
 
@@ -117,44 +135,124 @@ a {
     color: black;
 }
 
-#fonctionnement
-{
-    svg
-    {
-        width: 15px;
-        padding-left: $margin-padding-default;
+/*Footer all pages*/
+footer {
+    padding: $margin-padding-default;
+    background-color: $dark-grey;
+    color: white;
 
+    img {
+        width: 25%;
     }
 
-    li{
-        display: flex;
-        background-color: $light-grey;
-        margin: $margin-padding-default;
-        box-shadow: $button-shadow;
-        border-radius: 10px; 
+    svg {
+        width: 10px;
+    }
 
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+            padding-bottom: 5px;
+        }
+    }
+
+    a {
+        color: white;
+    }
+}
+/*Page d'accueil / Index*/
+
+#index_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+
+    svg {
+        width: 10px;
+    }
+
+    div:first-of-type {
+        display: flex;
+        background-color: $mid-grey;
+        justify-content: center;
+        width: 100%;
+        p {
+            padding-left: $margin-padding-default;
+            font-weight: bold;
+        }
+    }
+
+    div:last-of-type {
+        background-color: $light-grey;
+        padding: $margin-padding-default $margin-padding-default $margin-padding-default * 3 $margin-padding-default;
+
+        h3 {
+            padding-bottom: $margin-padding-default;
+        }
+    }
+
+    a {
+        @include button;
+    }
+}
+
+#fonctionnement {
+    svg {
+        height: 15px;
+        padding-left: $margin-padding-default;
+    }
+
+    ol {
+        counter-reset: counter;
+        padding-left: 0;
+        li {
+            display: flex;
+            align-items: center;
+            background-color: $light-grey;
+            margin: $margin-padding-default;
+            box-shadow: $button-shadow;
+            border-radius: 20px;
+            counter-increment: counter;
+            &::before {
+                content: counter(counter);
+                color: white;
+                border-radius: 50%;
+                height: 20px;
+                width: 20px;
+                text-align: center;
+                background-color: $color-secondary;
+                position: relative;
+                right: 10px;
+            }
+        }
     }
 
     h3 {
         padding-left: $margin-padding-default;
     }
-   
-}
-
-
-#restaurants, #fonctionnement {
-    padding: $margin-padding-default;
-
 }
 
 #restaurants {
     background-color: $light-grey;
+    svg {
+        color:white;
+        @include heart;
+    }
 }
 
+#restaurants,
+#fonctionnement {
+    padding: $margin-padding-default;
+}
 
-
-
-/*Accueil - mise en forme encarts restaurants*/
+/*mise en forme encarts restaurants*/
 .insert {
     margin-top: 10%;
     margin-bottom: 10%;
@@ -162,11 +260,25 @@ a {
     box-shadow: $button-shadow;
     background-color: white;
 
-    &__img {
-        width:100%;
-        border-radius: $radius $radius 0px 0px;
-        height: 150px;
-        object-fit: cover;
+    &__pic {
+        position: relative;
+
+        p {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            padding: 6px 15px 6px 15px;
+            background-color: $color-tertiary;
+            color: darken($color-tertiary, 40%);
+            font-weight: bold;
+            border-radius: 2px;
+        }
+        &__img {
+            width: 100%;
+            border-radius: $radius $radius 0px 0px;
+            height: 150px;
+            object-fit: cover;
+        }
     }
 
     &__txtblock {
@@ -176,132 +288,93 @@ a {
         align-items: center;
         padding-left: 5%;
         padding-right: 5%;
+        padding-bottom: 2%;
+        padding-top: 2%;
     }
 
-    h3, p {
+    h3,
+    p {
         margin: 0;
-
     }
 
     svg {
-        width: 20px; 
+        width: 20px;
     }
 }
 
+/*Pages menus*/
 
- footer {
-    padding: $margin-padding-default;
-    background-color: $dark-grey;
-    color: white;
-    
-
-    img {
-    width: 25%;
-    }
-
-    svg {
-        width:10px;
-    }
-
-    ul {
-    list-style-type: none;
-    padding-left: 0;
-    }
-
-    a
-    {
-        color: white;
-    }
-
-
-}
-
-
-/*fonts*/
-
-h1{
-    font-family: 'shrikhandregular';
-    font-size: $font-size-big;
-    margin:0;
-}
-
-:not(h1){
-    font-family: 'robotoregular';
-}
-
-
-/*4 pages menus*/
-
-.menu, .menu_footer {
+.menu,
+.menu_footer {
+    /*décalage du menu vers le haut pour chevaucher la photo du header*/
     position: relative;
-    top:-30px;
+    top: -40px;
 }
 
-.menu
-{
+.menu {
     background-color: $light-grey;
     padding: $margin-padding-default * 2 $margin-padding-default $margin-padding-default $margin-padding-default;
     border-radius: 40px 40px 0 0;
-    &_header {
 
+    &_header {
+        position: relative;
         div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-top: 2%;
-            padding-bottom: 2%;
+            display: block;
+            text-align: center;
         }
-    
+
         img {
             height: 280px;
             width: 100%;
             object-fit: cover;
         }
-    
 
         svg {
             width: 20px;
             position: absolute;
-            left: 10px;
+            top: 6px;
+            left: 20px;
         }
-        
-       
-    }  
-    
-    div:first-of-type
-    {
+    }
+
+    &__parts {
+        position: relative;
+        .underline {
+            position: absolute;
+            top: 25px;
+            width: 40px;
+            border: solid 2px $color-tertiary;
+        }
+    }
+
+    div:first-of-type {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        svg
-        {
-            width: 30px;
-            height: 30px;
-            padding-right: 3%;
+        svg {
+            color: $light-grey;
+            @include heart;
         }
-
     }
-
 
     ul {
         list-style-type: none;
         padding-left: 0;
-        background-color: white;
-        
-       
-        }
+    }
 
     li {
+        background-color: white;
         box-shadow: $button-shadow;
-        border-radius: $radius; 
-        margin-top: $margin-padding-default;
+        border-radius: $radius;
+        margin-top: $margin-padding-default / 1.5;
         padding-right: $margin-padding-default;
         padding-left: $margin-padding-default;
-        padding-top: 2%;
-        padding-bottom: 2%;
-    }    
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
 
-    h3, p {
+    h3,
+    p {
         margin: 0;
         font-size: $font-size-small;
     }
@@ -313,16 +386,9 @@ h1{
     }
 
     a {
-        color: white;
-        background: linear-gradient(160deg, $color-primary, $color-secondary);
-        border-radius: 50px; 
-        padding: $margin-padding-default;
-        box-shadow: $button-shadow;
+        @include button;
         display: block;
-        text-align:center;
+        text-align: center;
         margin: 15% 20% 15% 20%;
-        
-    }   
-
-
+    }
 }
