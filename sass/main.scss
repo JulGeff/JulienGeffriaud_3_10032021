@@ -44,6 +44,7 @@ $light-grey: #f6f6f6;
 $color-primary: #ff79da;
 $color-secondary: #9356dc;
 $color-tertiary: #99e2d0;
+$gradient-deg : 160deg;
 $lighten-percentage: 4%;
 
 $margin-padding-default: 5%;
@@ -58,13 +59,14 @@ $font-size-big: 1.6rem;
 
 $anim-duration : 1s;
 $anim-delay: .5s;
+$anim-big-delay: 3s;
 
 /*mixins*/
 
 @mixin button {
     /*mise en forme boutons + éclaircissement au survol*/
     color: white;
-    background: linear-gradient(160deg, $color-primary, $color-secondary);
+    background: linear-gradient($gradient-deg, $color-primary, $color-secondary);
     border-radius: $big-radius;
     padding: $margin-padding-default;
     box-shadow: $button-shadow;
@@ -84,7 +86,7 @@ $anim-delay: .5s;
         bottom: 0;
         left: 0;
         background: linear-gradient(
-            160deg,
+            $gradient-deg,
             lighten($color-primary, $lighten-percentage),
             lighten($color-secondary, $lighten-percentage)
         );
@@ -110,6 +112,8 @@ $anim-delay: .5s;
     }
 }
 
+
+
 /*Keyframes*/
 @keyframes heart-fill {
     100% {
@@ -131,8 +135,89 @@ $anim-delay: .5s;
 
 }
 
+@keyframes order {
+
+    0% { 
+        width:100%;
+     }
+      100% { 
+        width:60%;
+        
+     }
+    
+    }
 
 
+@keyframes progress-bar{
+    
+    0% {
+        transform: scaleX(0);
+    }
+    17% {
+        transform: scaleX(.18);
+    }
+    33% {
+        transform: scaleX(.4);
+    }
+    46% {
+        transform: scaleX(.81);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+    
+@keyframes body-appearance{
+    0% {
+        transform: translateX(-9999px);
+         
+    }
+    100% {
+        transform: translateX(0);
+        
+        }
+    }
+
+.loader {
+    position:absolute;
+    margin: auto;
+    top:0;
+    bottom: 0;
+    right:0;
+    left:0;
+    width: 200px;
+    height:5%;
+    border: $color-secondary solid 2px;
+    border-radius: $big-radius;
+    z-index: -9999;
+    background-attachment: scroll;
+    overflow: hidden;
+   
+
+    &__bar {
+        margin: 2px;
+        background: linear-gradient(
+            $gradient-deg,
+            $color-primary,
+            $color-secondary,);
+        animation : progress-bar  $anim-big-delay $anim-delay backwards;
+        transform-origin: left;
+        position:absolute;
+        top:0;
+        bottom: 0;
+        right:0;
+        left:0;
+        border-radius: $big-radius;
+      
+    }
+    
+}
+
+.accueil{
+    animation: body-appearance 0 backwards;
+    animation-delay: $anim-big-delay + $anim-delay*2;
+}   
+    
 /*fonts*/
 
 h1, footer h3 {
@@ -146,7 +231,11 @@ h1, footer h3 {
 
 body {
     margin: 0;
+    
+    
 }
+
+
 
 /*Habillage liens pour qu'ils ne changent pas de couleur après avoir été visités*/
 
@@ -182,7 +271,10 @@ footer {
         color: white;
     }
 }
+
+
 /*Page d'accueil / Index*/
+
 
 #index_header {
     display: flex;
@@ -359,6 +451,7 @@ footer {
     }
 
     &__parts {
+        
         animation: menu-intro $anim-duration backwards;
         position: relative;
         @for $i from 1 through 3 {
@@ -392,6 +485,7 @@ footer {
         list-style-type: none;
         padding-left: 0;
         
+        
     }
 
     li {
@@ -404,6 +498,19 @@ footer {
         padding-left: $margin-padding-default;
         padding-top: 3%;
         padding-bottom: 3%;
+        
+        
+        &:hover {
+        animation: order 1s ease-out forwards;
+        border-radius: $radius 0 0 $radius;
+        
+        
+        div p:first-of-type {
+            white-space: nowrap; 
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        }
         
     }
 
