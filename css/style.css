@@ -104,6 +104,19 @@ footer h3 {
     transform: translateX(0);
   }
 }
+@keyframes tick-turn {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes tick-move {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 20%;
+  }
+}
 body {
   margin: 0;
 }
@@ -214,7 +227,7 @@ footer a {
 
 .accueil {
   animation: body-appearance 0 backwards;
-  animation-delay: 3.5s;
+  animation-delay: 3s;
 }
 
 #fonctionnement svg {
@@ -330,35 +343,12 @@ footer a {
     padding: 5% 10% 0 10%;
   }
 }
-.menu__body {
-  background-color: #f6f6f6;
-}
-.menu__parts {
-  animation: menu-intro 1s backwards;
-  position: relative;
-}
-.menu__parts--1 {
-  animation-delay: 0.5s;
-}
-.menu__parts--2 {
-  animation-delay: 1s;
-}
-.menu__parts--3 {
-  animation-delay: 1.5s;
-}
-.menu__parts .underline {
-  position: absolute;
-  top: 25px;
-  width: 40px;
-  border: solid 2px #99e2d0;
-  background-color: #99e2d0;
-}
-.menu div:first-of-type {
+.menu__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.menu div:first-of-type svg {
+.menu__title svg {
   color: #f6f6f6;
   /*mise en forme coeurs + remplissage rouge au survol*/
   width: 30px;
@@ -370,17 +360,95 @@ footer a {
   position: relative;
   z-index: 1;
 }
-.menu div:first-of-type svg:hover {
+.menu__title svg:hover {
   animation: heart-fill 1s ease-out forwards;
+}
+.menu__body {
+  background-color: #f6f6f6;
+}
+.menu__parts {
+  animation: menu-intro 1s backwards;
+  position: relative;
+}
+.menu__parts--1 {
+  animation-delay: 0.5s;
+}
+.menu__parts__item {
+  position: relative;
+}
+.menu__parts__item__svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 20%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #99e2d0;
+  border-radius: 0 11px 11px 0;
+}
+.menu__parts__item__svg svg {
+  width: 40px;
+  height: 40px;
+}
+.menu__parts--2 {
+  animation-delay: 1s;
+}
+.menu__parts__item {
+  position: relative;
+}
+.menu__parts__item__svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 20%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #99e2d0;
+  border-radius: 0 11px 11px 0;
+}
+.menu__parts__item__svg svg {
+  width: 40px;
+  height: 40px;
+}
+.menu__parts--3 {
+  animation-delay: 1.5s;
+}
+.menu__parts__item {
+  position: relative;
+}
+.menu__parts__item__svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 20%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #99e2d0;
+  border-radius: 0 11px 11px 0;
+}
+.menu__parts__item__svg svg {
+  width: 40px;
+  height: 40px;
+}
+.menu__parts .underline {
+  position: absolute;
+  top: 25px;
+  width: 40px;
+  border: solid 2px #99e2d0;
+  background-color: #99e2d0;
 }
 .menu ul {
   list-style-type: none;
   padding-left: 0;
-}
-.menu ul svg {
-  background-color: #99e2d0;
-  position: absolute;
-  left: 0;
 }
 @media screen and (min-width: 1024px) {
   .menu ul {
@@ -405,21 +473,19 @@ footer a {
     width: calc(100% / 3);
   }
 }
-@media screen and (min-width: 1024px) {
-  .menu li div {
-    display: flex;
-    align-items: flex-end;
-  }
-}
 .menu li:hover {
-  animation: order 1s ease-out forwards;
-  border-radius: 11px 0 0 11px;
   cursor: pointer;
 }
 .menu li:hover div p:first-of-type {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.menu li:hover:hover + .menu__parts__item__svg {
+  animation: tick-move 0.3s ease-out forwards;
+}
+.menu li:hover:hover + .menu__parts__item__svg svg {
+  animation: tick-turn 0.3s ease-out forwards;
 }
 .menu a {
   /*mise en forme boutons + éclaircissement au survol*/
@@ -472,11 +538,11 @@ footer a {
   border: #9356dc solid 2px;
   z-index: -999999;
   opacity: 0;
-  animation: loader 3.5s backwards;
+  animation: loader 3s backwards;
 }
 .loader__bar {
   background: linear-gradient(160deg, #ff79da, #9356dc);
-  animation: progress-bar 3s 0.5s backwards;
+  animation: progress-bar 2.5s 0.5s backwards;
   transform-origin: left;
   position: absolute;
   top: 0;
