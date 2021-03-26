@@ -1,0 +1,48 @@
+@mixin button {
+    /*mise en forme boutons + éclaircissement au survol*/
+    color: white;
+    background: linear-gradient($gradient-deg, $color-primary, $color-secondary);
+    border-radius: $big-radius;
+    padding: $margin-padding-default;
+    box-shadow: $button-shadow;
+    z-index: 1;
+    position: relative;
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "";
+        border-radius: $big-radius;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(
+            $gradient-deg,
+            lighten($color-primary, $lighten-percentage),
+            lighten($color-secondary, $lighten-percentage)
+        );
+        box-shadow: $button-shadow-plus;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 200ms;
+    }
+}
+
+@mixin heart {
+    /*mise en forme coeurs + remplissage rouge au survol*/
+    width: 30px;
+    height: 30px;
+    padding-right: 3%;
+    stroke-width: 3%;
+    stroke: black;
+    fill: currentColor;
+    position: relative;
+    z-index: 1;
+    &:hover {
+        animation: heart-fill 1s ease-out forwards;
+    }
+}

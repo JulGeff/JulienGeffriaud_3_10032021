@@ -1,0 +1,27 @@
+.loader {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 50%;
+    height: 5%;
+    border: $color-secondary solid 2px;
+    z-index: -999999;
+    opacity: 0;
+    animation: loader $anim-big-delay + $anim-delay backwards;
+
+    &__bar {
+        background: linear-gradient($gradient-deg, $color-primary, $color-secondary);
+        animation: progress-bar $anim-big-delay $anim-delay backwards;
+        transform-origin: left;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: 3px;
+        opacity: 0;
+    }
+}

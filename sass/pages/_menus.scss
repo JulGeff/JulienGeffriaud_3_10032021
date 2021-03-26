@@ -1,0 +1,97 @@
+/*Pages menus*/
+
+.menu {
+    /*décalage du menu vers le haut pour chevaucher la photo du header*/
+    position: relative;
+    top: -40px;
+}
+
+.menu {
+    background-color: $light-grey;
+    padding: $margin-padding-default * 2 $margin-padding-default 0 $margin-padding-default;
+    border-radius: 40px 40px 0 0;
+
+    &__body {
+        background-color: $light-grey;
+    }
+
+    &__parts {
+        animation: menu-intro $anim-duration backwards;
+        position: relative;
+        @for $i from 1 through 3 {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+        }
+
+        .underline {
+            position: absolute;
+            top: 25px;
+            width: 40px;
+            border: solid 2px $color-tertiary;
+            background-color: $color-tertiary;
+        }
+    }
+
+    div:first-of-type {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        svg {
+            color: $light-grey;
+            @include heart;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        svg {
+            background-color: $color-tertiary;
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    li {
+        background-color: white;
+        box-shadow: $button-shadow;
+        border-radius: $radius;
+        margin-top: $margin-padding-default / 1.5;
+        padding-right: $margin-padding-default;
+        padding-left: $margin-padding-default;
+        padding-top: 3%;
+        padding-bottom: 3%;
+
+        &:hover {
+            animation: order 1s ease-out forwards;
+            border-radius: $radius 0 0 $radius;
+            cursor: pointer;
+
+            div p:first-of-type {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    h3,
+    p {
+        margin: 0;
+        font-size: $font-size-small;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: $font-size-normal;
+        font-weight: normal;
+    }
+
+    a {
+        @include button;
+        display: block;
+        text-align: center;
+        margin: 15% 20% 15% 20%;
+    }
+}

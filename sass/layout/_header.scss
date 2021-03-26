@@ -1,0 +1,59 @@
+#index_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+
+    svg {
+        width: 10px;
+    }
+
+    div:first-of-type {
+        display: flex;
+        background-color: $mid-grey;
+        justify-content: center;
+        width: 100%;
+        p {
+            padding-left: $margin-padding-default;
+            font-weight: bold;
+        }
+    }
+
+    div:last-of-type {
+        background-color: $light-grey;
+        padding: $margin-padding-default $margin-padding-default $margin-padding-default * 3 $margin-padding-default;
+
+        h3 {
+            padding-bottom: $margin-padding-default;
+        }
+    }
+
+    a {
+        @include button;
+    }
+}
+
+.menu_header {
+    position: relative;
+    div {
+        display: block;
+        text-align: center;
+    }
+
+    img {
+        height: 280px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    svg {
+        width: 20px;
+        position: absolute;
+        top: 6px;
+        left: 20px;
+    }
+}

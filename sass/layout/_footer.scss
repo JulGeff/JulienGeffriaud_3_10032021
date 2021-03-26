@@ -1,0 +1,26 @@
+footer {
+    padding: $margin-padding-default;
+    background-color: $dark-grey;
+    color: white;
+
+    img {
+        width: 25%;
+    }
+
+    svg {
+        width: 10px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+            padding-bottom: 5px;
+        }
+    }
+
+    a {
+        color: white;
+    }
+}
