@@ -366,6 +366,13 @@ footer a {
 .menu__body {
   background-color: #f6f6f6;
 }
+@media screen and (min-width: 1024px) {
+  .menu__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .menu__parts {
   animation: menu-intro 1s backwards;
   position: relative;
@@ -380,7 +387,6 @@ footer a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
   width: 0%;
   position: absolute;
   top: 0;
@@ -403,7 +409,6 @@ footer a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
   width: 0%;
   position: absolute;
   top: 0;
@@ -426,7 +431,6 @@ footer a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
   width: 0%;
   position: absolute;
   top: 0;
@@ -450,13 +454,6 @@ footer a {
   list-style-type: none;
   padding-left: 0;
 }
-@media screen and (min-width: 1024px) {
-  .menu ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
 .menu li {
   background-color: white;
   box-shadow: 1px 1px 10px #c0bfbf;
@@ -466,12 +463,6 @@ footer a {
   padding-left: 5%;
   padding-top: 3%;
   padding-bottom: 3%;
-}
-@media screen and (min-width: 1024px) {
-  .menu li {
-    margin: 1%;
-    width: calc(100% / 3);
-  }
 }
 .menu li:hover {
   cursor: pointer;
@@ -516,11 +507,6 @@ footer a {
   opacity: 0;
   z-index: -1;
   transition: opacity 200ms;
-}
-@media screen and (min-width: 1024px) {
-  .menu a {
-    margin: 5% 30% 5% 30%;
-  }
 }
 .menu p {
   margin: 0;

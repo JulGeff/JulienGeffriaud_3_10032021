@@ -24,6 +24,15 @@
         background-color: $light-grey;
     }
 
+    &__list {
+        @media screen and (min-width: map-get($breakpoints, desktop)) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+    }
+
     &__parts {
         animation: menu-intro $anim-duration backwards;
         position: relative;
@@ -38,7 +47,6 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    height: 100%;
                     width: 0%;
                     position: absolute;
                     top: 0;
@@ -67,12 +75,6 @@
     ul {
         list-style-type: none;
         padding-left: 0;
-
-        @media screen and (min-width: map-get($breakpoints, desktop)) {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
     }
 
     li {
@@ -84,11 +86,6 @@
         padding-left: $margin-padding-default;
         padding-top: 3%;
         padding-bottom: 3%;
-
-        @media screen and (min-width: map-get($breakpoints, desktop)) {
-            margin: 1%;
-            width: calc(100% / 3);
-        }
 
         &:hover {
             cursor: pointer;
@@ -114,9 +111,6 @@
         display: block;
         text-align: center;
         margin: 15% 20% 15% 20%;
-        @media screen and (min-width: map-get($breakpoints, desktop)) {
-            margin: 5% 30% 5% 30%;
-        }
     }
 
     p {
