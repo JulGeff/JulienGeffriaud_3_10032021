@@ -29,6 +29,20 @@ footer h3 {
   font-family: "robotoregular";
 }
 
+.menu h3,
+.menu p {
+  font-size: 0.9rem;
+}
+.menu h2 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.insert p {
+  font-weight: bold;
+}
+
 @keyframes heart-fill {
   100% {
     fill: rgba(255, 0, 0, 0.637);
@@ -277,7 +291,6 @@ footer a {
   padding: 6px 15px 6px 15px;
   background-color: #99e2d0;
   color: #278870;
-  font-weight: bold;
   border-radius: 2px;
 }
 .insert__pic__img {
@@ -304,17 +317,18 @@ footer a {
   width: 20px;
 }
 
-/*Pages menus*/
 .menu {
-  /*décalage du menu vers le haut pour chevaucher la photo du header*/
   position: relative;
   top: -40px;
-}
-
-.menu {
   background-color: #f6f6f6;
   padding: 10% 5% 0 5%;
   border-radius: 40px 40px 0 0;
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    top: 0;
+    padding: 5% 10% 0 10%;
+  }
 }
 .menu__body {
   background-color: #f6f6f6;
@@ -368,6 +382,13 @@ footer a {
   position: absolute;
   left: 0;
 }
+@media screen and (min-width: 1024px) {
+  .menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .menu li {
   background-color: white;
   box-shadow: 1px 1px 10px #c0bfbf;
@@ -377,6 +398,18 @@ footer a {
   padding-left: 5%;
   padding-top: 3%;
   padding-bottom: 3%;
+  width: calc(100% /3);
+}
+@media screen and (min-width: 1024px) {
+  .menu li {
+    margin: 1%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu li div {
+    display: flex;
+    align-items: flex-end;
+  }
 }
 .menu li:hover {
   animation: order 1s ease-out forwards;
@@ -387,16 +420,6 @@ footer a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.menu h3,
-.menu p {
-  margin: 0;
-  font-size: 0.9rem;
-}
-.menu h2 {
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  font-weight: normal;
 }
 .menu a {
   /*mise en forme boutons + éclaircissement au survol*/
@@ -427,6 +450,14 @@ footer a {
   opacity: 0;
   z-index: -1;
   transition: opacity 200ms;
+}
+@media screen and (min-width: 1024px) {
+  .menu a {
+    margin: 5% 30% 5% 30%;
+  }
+}
+.menu p {
+  margin: 0;
 }
 
 .loader {

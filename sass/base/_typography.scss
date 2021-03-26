@@ -43,3 +43,23 @@ footer h3 {
 :not(h1) {
     font-family: "robotoregular";
 }
+
+.menu {
+    h3,
+    p {
+        
+        font-size: $font-size-small;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: $font-size-normal;
+        font-weight: normal;
+    }
+}
+
+
+.insert p
+{
+    font-weight: bold;
+}

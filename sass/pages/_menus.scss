@@ -1,12 +1,11 @@
-/*Pages menus*/
-
 .menu {
-    /*décalage du menu vers le haut pour chevaucher la photo du header*/
     position: relative;
     top: -40px;
-}
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        top: 0;
+        padding: $margin-padding-default $margin-padding-default * 2 0 $margin-padding-default * 2;
+    }
 
-.menu {
     background-color: $light-grey;
     padding: $margin-padding-default * 2 $margin-padding-default 0 $margin-padding-default;
     border-radius: 40px 40px 0 0;
@@ -51,6 +50,11 @@
             position: absolute;
             left: 0;
         }
+        @media screen and (min-width: map-get($breakpoints, desktop)) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 
     li {
@@ -62,6 +66,17 @@
         padding-left: $margin-padding-default;
         padding-top: 3%;
         padding-bottom: 3%;
+        width: calc(100% /3);
+        @media screen and (min-width: map-get($breakpoints, desktop)) {
+            margin: 1%;
+        }
+
+        div {
+            @media screen and (min-width: map-get($breakpoints, desktop)) {
+                display: flex;
+                align-items: flex-end;
+            }
+        }
 
         &:hover {
             animation: order 1s ease-out forwards;
@@ -76,22 +91,17 @@
         }
     }
 
-    h3,
-    p {
-        margin: 0;
-        font-size: $font-size-small;
-    }
-
-    h2 {
-        text-transform: uppercase;
-        font-size: $font-size-normal;
-        font-weight: normal;
-    }
-
     a {
         @include button;
         display: block;
         text-align: center;
         margin: 15% 20% 15% 20%;
+        @media screen and (min-width: map-get($breakpoints, desktop)) {
+            margin: 5% 30% 5% 30%;
+        }
+    }
+
+    p {
+        margin: 0;
     }
 }
