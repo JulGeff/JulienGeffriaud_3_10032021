@@ -36,7 +36,7 @@
                 position: relative;
                 &__svg {
                     display: flex;
-                    align-items:center;
+                    align-items: center;
                     justify-content: center;
                     height: 100%;
                     width: 0%;
@@ -46,10 +46,8 @@
                     right: 0;
                     background-color: $color-tertiary;
                     border-radius: 0 $radius $radius 0;
-                    
 
                     svg {
-                        
                         width: 40px;
                         height: 40px;
                     }
