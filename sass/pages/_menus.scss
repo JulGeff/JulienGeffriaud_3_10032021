@@ -66,9 +66,9 @@
         padding-left: $margin-padding-default;
         padding-top: 3%;
         padding-bottom: 3%;
-        width: calc(100% /3);
         @media screen and (min-width: map-get($breakpoints, desktop)) {
             margin: 1%;
+            width: calc(100% / 3);
         }
 
         div {
