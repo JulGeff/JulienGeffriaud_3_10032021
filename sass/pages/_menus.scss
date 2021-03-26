@@ -30,7 +30,6 @@
             flex-direction: row;
             justify-content: space-between;
         }
-
     }
 
     &__parts {
@@ -54,11 +53,18 @@
                     right: 0;
                     background-color: $color-tertiary;
                     border-radius: 0 $radius $radius 0;
+                    box-shadow: $button-shadow;
 
                     svg {
                         width: 40px;
                         height: 40px;
                     }
+                }
+
+                &__price {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
                 }
             }
         }
@@ -89,6 +95,7 @@
 
         &:hover {
             cursor: pointer;
+            animation: tick-move-mirror $anim-short ease-out forwards;
 
             div p:first-of-type {
                 white-space: nowrap;
