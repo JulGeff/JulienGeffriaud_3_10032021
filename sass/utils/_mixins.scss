@@ -7,6 +7,11 @@
     box-shadow: $button-shadow;
     z-index: 1;
     position: relative;
+    display: block;
+    text-align: center;
+    width: 30%;
+    margin: auto;
+    
     &:hover {
         &::after {
             opacity: 1;
@@ -28,7 +33,7 @@
         box-shadow: $button-shadow-plus;
         opacity: 0;
         z-index: -1;
-        transition: opacity 200ms;
+        transition: opacity 300ms;
     }
 }
 

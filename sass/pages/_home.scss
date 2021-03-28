@@ -1,7 +1,7 @@
-.accueil {
+/*.accueil {
     animation: body-appearance 0 backwards;
     animation-delay: $anim-big-delay + $anim-delay;
-}
+}*/
 
 #fonctionnement {
     svg {
@@ -12,6 +12,10 @@
     ol {
         counter-reset: counter;
         padding-left: 0;
+        @media screen and (min-width: map-get($breakpoints, tablet-landscape)) {
+            display: flex;
+            justify-content: space-between;
+        }
         li {
             display: flex;
             align-items: center;
@@ -20,6 +24,10 @@
             box-shadow: $button-shadow;
             border-radius: 20px;
             counter-increment: counter;
+            @media screen and (min-width: map-get($breakpoints, tablet-landscape)) {
+                width: 100%;
+                margin: $margin-padding-default / 3;
+            }
             &::before {
                 content: counter(counter);
                 color: white;
@@ -41,9 +49,21 @@
 
 #restaurants {
     background-color: $light-grey;
+
     svg {
         color: white;
         @include heart;
+    }
+}
+
+@media screen and (min-width: map-get($breakpoints, tablet-landscape)) {
+    .restaurants__notitle {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media screen and (min-width: map-get($breakpoints, desktop)) {
+            justify-content: space-evenly;
+        }
     }
 }
 
@@ -54,12 +74,22 @@
 
 /*mise en forme encarts restaurants*/
 .insert {
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: $margin-padding-default * 2;
+    margin-bottom: $margin-padding-default * 2;
     border-radius: $radius;
     box-shadow: $button-shadow;
     background-color: white;
+    @media screen and (min-width: map-get($breakpoints, tablet-landscape)) {
+        width: 420px;
+    }
 
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        width: 500px;
+    }
+
+    &:first-of-type {
+        margin-top: $margin-padding-default;
+    }
     &__pic {
         position: relative;
 
@@ -77,6 +107,9 @@
             border-radius: $radius $radius 0px 0px;
             height: 150px;
             object-fit: cover;
+            @media screen and (min-width: map-get($breakpoints, tablet)) {
+                height: 250px;
+            }
         }
     }
 

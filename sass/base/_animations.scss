@@ -19,6 +19,15 @@
     }
 }
 
+@keyframes body-appearance {
+    0% {
+        transform: translateX(-9999px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 @keyframes loader {
     0% {
         opacity: 1;
@@ -52,27 +61,15 @@
     }
 }
 
-@keyframes body-appearance {
-    0% {
-        transform: translateX(-9999px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
+
 
 @keyframes tick-move-mirror {
     0% {
         width: 90%;
-        
     }
-
-
 
     100% {
         width: 70%;
         border-radius: $radius 0 0 $radius;
-    
-        
     }
 }
