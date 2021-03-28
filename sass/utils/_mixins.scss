@@ -42,8 +42,9 @@
     fill: currentColor;
     position: relative;
     z-index: 1;
+    transition : fill $anim-short * 2;
     &:hover {
-        animation: heart-fill 1s ease-out forwards;
+        fill: rgba(255, 0, 0, 0.637);
     }
 }
 

@@ -54,10 +54,12 @@
                     background-color: $color-tertiary;
                     border-radius: 0 $radius $radius 0;
                     box-shadow: $button-shadow;
+                    transition: width $anim-short;
 
                     svg {
                         width: 40px;
                         height: 40px;
+                        transition: transform $anim-short;
                     }
                 }
 
@@ -104,11 +106,11 @@
             }
 
             &:hover + .menu__parts__item__svg {
-                animation: tick-move $anim-short ease-out forwards;
+                width: 20%;
             }
 
             &:hover + .menu__parts__item__svg svg {
-                animation: tick-turn $anim-short ease-out forwards;
+                transform: rotate(360deg);
             }
         }
     }

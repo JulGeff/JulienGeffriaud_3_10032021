@@ -43,11 +43,6 @@ footer h3 {
   font-weight: bold;
 }
 
-@keyframes heart-fill {
-  100% {
-    fill: rgba(255, 0, 0, 0.637);
-  }
-}
 @keyframes menu-intro {
   0% {
     opacity: 0;
@@ -102,19 +97,6 @@ footer h3 {
   }
   100% {
     transform: translateX(0);
-  }
-}
-@keyframes tick-turn {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes tick-move {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 20%;
   }
 }
 @keyframes tick-move-mirror {
@@ -285,9 +267,10 @@ footer a {
   fill: currentColor;
   position: relative;
   z-index: 1;
+  transition: fill 0.6s;
 }
 #restaurants svg:hover {
-  animation: heart-fill 1s ease-out forwards;
+  fill: rgba(255, 0, 0, 0.637);
 }
 
 #restaurants,
@@ -368,9 +351,10 @@ footer a {
   fill: currentColor;
   position: relative;
   z-index: 1;
+  transition: fill 0.6s;
 }
 .menu__title svg:hover {
-  animation: heart-fill 1s ease-out forwards;
+  fill: rgba(255, 0, 0, 0.637);
 }
 .menu__body {
   background-color: #f6f6f6;
@@ -404,10 +388,12 @@ footer a {
   background-color: #99e2d0;
   border-radius: 0 11px 11px 0;
   box-shadow: 1px 1px 10px #c0bfbf;
+  transition: width 0.3s;
 }
 .menu__parts__item__svg svg {
   width: 40px;
   height: 40px;
+  transition: transform 0.3s;
 }
 .menu__parts__item__price {
   display: flex;
@@ -432,10 +418,12 @@ footer a {
   background-color: #99e2d0;
   border-radius: 0 11px 11px 0;
   box-shadow: 1px 1px 10px #c0bfbf;
+  transition: width 0.3s;
 }
 .menu__parts__item__svg svg {
   width: 40px;
   height: 40px;
+  transition: transform 0.3s;
 }
 .menu__parts__item__price {
   display: flex;
@@ -460,10 +448,12 @@ footer a {
   background-color: #99e2d0;
   border-radius: 0 11px 11px 0;
   box-shadow: 1px 1px 10px #c0bfbf;
+  transition: width 0.3s;
 }
 .menu__parts__item__svg svg {
   width: 40px;
   height: 40px;
+  transition: transform 0.3s;
 }
 .menu__parts__item__price {
   display: flex;
@@ -501,10 +491,10 @@ footer a {
   text-overflow: ellipsis;
 }
 .menu li:hover:hover + .menu__parts__item__svg {
-  animation: tick-move 0.3s ease-out forwards;
+  width: 20%;
 }
 .menu li:hover:hover + .menu__parts__item__svg svg {
-  animation: tick-turn 0.3s ease-out forwards;
+  transform: rotate(360deg);
 }
 .menu a {
   /*mise en forme boutons + éclaircissement au survol*/
