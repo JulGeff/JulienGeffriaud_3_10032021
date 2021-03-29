@@ -4,7 +4,11 @@
     background-color: $light-grey;
     padding: $margin-padding-default * 2 $margin-padding-default 0 $margin-padding-default;
     border-radius: 40px 40px 0 0;
+
     @media screen and (min-width: map-get($breakpoints, tablet)) {
+        padding-top: $margin-padding-default;
+    }
+    @media screen and (min-width: map-get($breakpoints, tablet-landscape)) {
         padding: $margin-padding-default 0 0 0;
     }
 
@@ -30,7 +34,7 @@
     }
 
     &__list {
-        @media screen and (min-width: map-get($breakpoints, tablet)) {
+        @media screen and (min-width: map-get($breakpoints, tablet-landscape)) {
             display: flex;
             justify-content: space-evenly;
         }
@@ -40,7 +44,7 @@
         animation: menu-intro $anim-duration backwards;
         position: relative;
         padding-top: $margin-padding-default;
-        @media screen and (min-width: map-get($breakpoints, tablet)) {
+        @media screen and (min-width: map-get($breakpoints, tablet-landscape)) {
             width: 30%;
         }
 
@@ -51,8 +55,6 @@
 
             &__item {
                 position: relative;
-                @media screen and (min-width: map-get($breakpoints, tablet)) {
-                }
 
                 &__txt {
                     background-color: white;
