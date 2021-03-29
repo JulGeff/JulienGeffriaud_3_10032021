@@ -157,8 +157,18 @@ a {
   background-color: #f6f6f6;
   padding: 5% 5% 15% 5%;
 }
+@media screen and (min-width: 768px) {
+  #index_header div:last-of-type {
+    padding: 0;
+  }
+}
 #index_header div:last-of-type h3 {
   padding-bottom: 5%;
+}
+@media screen and (min-width: 768px) {
+  #index_header div:last-of-type h3 {
+    padding: 0;
+  }
 }
 #index_header a {
   /*mise en forme boutons + éclaircissement au survol*/
@@ -173,6 +183,19 @@ a {
   text-align: center;
   width: 60%;
   margin: auto;
+}
+@media screen and (min-width: 768px) {
+  #index_header a {
+    padding: 2.5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #index_header a {
+    width: 20%;
+  }
 }
 #index_header a:hover::after {
   opacity: 1;
@@ -205,6 +228,11 @@ a {
   height: 230px;
   width: 100%;
   object-fit: cover;
+}
+@media screen and (min-width: 1024px) {
+  .menu_header img {
+    height: 400px;
+  }
 }
 .menu_header svg {
   width: 20px;
@@ -302,22 +330,30 @@ footer a {
 #restaurants svg:hover {
   fill: rgba(255, 0, 0, 0.637);
 }
+@media screen and (min-width: 768px) {
+  #restaurants a {
+    width: 45%;
+  }
+}
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .restaurants__notitle {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 }
-@media screen and (min-width: 1024px) and (min-width: 1280px) {
-  .restaurants__notitle {
-    justify-content: space-evenly;
-  }
-}
+
 #restaurants,
 #fonctionnement {
   padding: 5%;
+}
+@media screen and (min-width: 768px) {
+  #restaurants,
+#fonctionnement {
+    padding-top: 1.25%;
+    padding-bottom: 2.5%;
+  }
 }
 
 /*mise en forme encarts restaurants*/
@@ -327,16 +363,6 @@ footer a {
   border-radius: 11px;
   box-shadow: 1px 1px 10px #c0bfbf;
   background-color: white;
-}
-@media screen and (min-width: 1024px) {
-  .insert {
-    width: 420px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .insert {
-    width: 500px;
-  }
 }
 .insert:first-of-type {
   margin-top: 5%;
@@ -389,10 +415,20 @@ footer a {
   padding: 10% 5% 0 5%;
   border-radius: 40px 40px 0 0;
 }
+@media screen and (min-width: 768px) {
+  .menu {
+    padding: 5% 0 0 0;
+  }
+}
 .menu__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .menu__title {
+    justify-content: center;
+  }
 }
 .menu__title svg {
   color: #f6f6f6;
@@ -410,19 +446,29 @@ footer a {
 .menu__title svg:hover {
   fill: rgba(255, 0, 0, 0.637);
 }
+@media screen and (min-width: 768px) {
+  .menu__title svg {
+    padding-left: 5%;
+  }
+}
 .menu__body {
   background-color: #f6f6f6;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .menu__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 }
 .menu__parts {
   animation: menu-intro 1s backwards;
   position: relative;
   padding-top: 5%;
+}
+@media screen and (min-width: 768px) {
+  .menu__parts {
+    width: 30%;
+  }
 }
 .menu__parts--1 {
   animation-delay: 0.5s;
@@ -440,6 +486,12 @@ footer a {
   padding-top: 3%;
   padding-bottom: 3%;
 }
+@media screen and (min-width: 768px) {
+  .menu__parts__item__txt {
+    padding-top: 6%;
+    padding-bottom: 6%;
+  }
+}
 .menu__parts__item__txt__price {
   display: flex;
   flex-direction: row;
@@ -449,7 +501,8 @@ footer a {
   cursor: pointer;
   animation: tick-move-mirror 0.3s ease-out forwards;
 }
-.menu__parts__item__txt:hover div p:first-of-type, .menu__parts__item__txt:hover h3 {
+.menu__parts__item__txt:hover div p:first-of-type,
+.menu__parts__item__txt:hover h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -464,7 +517,7 @@ footer a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 0%;
+  width: 0;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -495,6 +548,12 @@ footer a {
   padding-top: 3%;
   padding-bottom: 3%;
 }
+@media screen and (min-width: 768px) {
+  .menu__parts__item__txt {
+    padding-top: 6%;
+    padding-bottom: 6%;
+  }
+}
 .menu__parts__item__txt__price {
   display: flex;
   flex-direction: row;
@@ -504,7 +563,8 @@ footer a {
   cursor: pointer;
   animation: tick-move-mirror 0.3s ease-out forwards;
 }
-.menu__parts__item__txt:hover div p:first-of-type, .menu__parts__item__txt:hover h3 {
+.menu__parts__item__txt:hover div p:first-of-type,
+.menu__parts__item__txt:hover h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -519,7 +579,7 @@ footer a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 0%;
+  width: 0;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -550,6 +610,12 @@ footer a {
   padding-top: 3%;
   padding-bottom: 3%;
 }
+@media screen and (min-width: 768px) {
+  .menu__parts__item__txt {
+    padding-top: 6%;
+    padding-bottom: 6%;
+  }
+}
 .menu__parts__item__txt__price {
   display: flex;
   flex-direction: row;
@@ -559,7 +625,8 @@ footer a {
   cursor: pointer;
   animation: tick-move-mirror 0.3s ease-out forwards;
 }
-.menu__parts__item__txt:hover div p:first-of-type, .menu__parts__item__txt:hover h3 {
+.menu__parts__item__txt:hover div p:first-of-type,
+.menu__parts__item__txt:hover h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -574,7 +641,7 @@ footer a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 0%;
+  width: 0;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -613,6 +680,19 @@ footer a {
   margin: auto;
   margin-top: 10%;
   margin-bottom: 10%;
+}
+@media screen and (min-width: 768px) {
+  .menu a {
+    padding: 2.5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu a {
+    width: 20%;
+  }
 }
 .menu a:hover::after {
   opacity: 1;

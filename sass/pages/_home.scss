@@ -54,22 +54,30 @@
         color: white;
         @include heart;
     }
+
+    a {
+        @media screen and (min-width: map-get($breakpoints, tablet)) {
+            width: 45%;
+        }
+    }
 }
 
-@media screen and (min-width: map-get($breakpoints, tablet-landscape)) {
-    .restaurants__notitle {
+.restaurants__notitle {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        @media screen and (min-width: map-get($breakpoints, desktop)) {
-            justify-content: space-evenly;
-        }
     }
 }
 
 #restaurants,
 #fonctionnement {
     padding: $margin-padding-default;
+
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+        padding-top: $margin-padding-default / 4;
+        padding-bottom: $margin-padding-default / 2;
+    }
 }
 
 /*mise en forme encarts restaurants*/
@@ -79,13 +87,6 @@
     border-radius: $radius;
     box-shadow: $button-shadow;
     background-color: white;
-    @media screen and (min-width: map-get($breakpoints, tablet-landscape)) {
-        width: 420px;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, desktop)) {
-        width: 500px;
-    }
 
     &:first-of-type {
         margin-top: $margin-padding-default;

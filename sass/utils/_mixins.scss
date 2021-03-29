@@ -11,7 +11,17 @@
     text-align: center;
     width: 60%;
     margin: auto;
-    
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+        padding: $margin-padding-default / 2;
+        margin-top: $margin-padding-default;
+        margin-bottom: $margin-padding-default;
+        width: 30%;
+    }
+    @media screen and (min-width: map-get($breakpoints, tablet-landscape)) {
+        width: 20%;
+        
+    }
+
     &:hover {
         &::after {
             opacity: 1;
@@ -47,11 +57,8 @@
     fill: currentColor;
     position: relative;
     z-index: 1;
-    transition : fill $anim-short * 2;
+    transition: fill $anim-short * 2;
     &:hover {
         fill: rgba(255, 0, 0, 0.637);
     }
 }
-
-
-

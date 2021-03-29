@@ -4,15 +4,24 @@
     background-color: $light-grey;
     padding: $margin-padding-default * 2 $margin-padding-default 0 $margin-padding-default;
     border-radius: 40px 40px 0 0;
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+        padding: $margin-padding-default 0 0 0;
+    }
 
     &__title {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (min-width: map-get($breakpoints, tablet)) {
+            justify-content: center;
+        }
 
         svg {
             color: $light-grey;
             @include heart;
+            @media screen and (min-width: map-get($breakpoints, tablet)) {
+                padding-left: $margin-padding-default;
+            }
         }
     }
 
@@ -21,19 +30,20 @@
     }
 
     &__list {
-
-        @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @media screen and (min-width: map-get($breakpoints, tablet)) {
             display: flex;
-            justify-content: space-between;
-            
+            justify-content: space-evenly;
         }
-    }   
-     
+    }
 
     &__parts {
         animation: menu-intro $anim-duration backwards;
         position: relative;
         padding-top: $margin-padding-default;
+        @media screen and (min-width: map-get($breakpoints, tablet)) {
+            width: 30%;
+        }
+
         @for $i from 1 through 3 {
             &--#{$i} {
                 animation-delay: $anim-delay * $i;
@@ -41,6 +51,8 @@
 
             &__item {
                 position: relative;
+                @media screen and (min-width: map-get($breakpoints, tablet)) {
+                }
 
                 &__txt {
                     background-color: white;
@@ -51,6 +63,10 @@
                     padding-left: $margin-padding-default;
                     padding-top: 3%;
                     padding-bottom: 3%;
+                    @media screen and (min-width: map-get($breakpoints, tablet)) {
+                        padding-top: 6%;
+                        padding-bottom: 6%;
+                    }
                     &__price {
                         display: flex;
                         flex-direction: row;
@@ -61,7 +77,8 @@
                         cursor: pointer;
                         animation: tick-move-mirror $anim-short ease-out forwards;
 
-                        div p:first-of-type, h3 {
+                        div p:first-of-type,
+                        h3 {
                             white-space: nowrap;
                             overflow: hidden;
                             text-overflow: ellipsis;
@@ -81,7 +98,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 0%;
+                    width: 0;
                     position: absolute;
                     top: 0;
                     bottom: 0;
@@ -114,8 +131,8 @@
 
     a {
         @include button;
-        margin-top: $margin-padding-default*2;
-        margin-bottom: $margin-padding-default*2;
+        margin-top: $margin-padding-default * 2;
+        margin-bottom: $margin-padding-default * 2;
     }
 
     p {

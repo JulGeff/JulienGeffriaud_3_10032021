@@ -27,14 +27,22 @@
     div:last-of-type {
         background-color: $light-grey;
         padding: $margin-padding-default $margin-padding-default $margin-padding-default * 3 $margin-padding-default;
+        @media screen and (min-width: map-get($breakpoints, tablet)) {
+            padding: 0;
+        }
 
         h3 {
             padding-bottom: $margin-padding-default;
+            @media screen and (min-width: map-get($breakpoints, tablet)) {
+                padding: 0;
+            }
         }
+      
     }
 
     a {
         @include button;
+        
     }
 }
 
@@ -51,6 +59,10 @@
         height: 230px;
         width: 100%;
         object-fit: cover;
+        @media screen and (min-width: map-get($breakpoints, tablet-landscape)) {
+            height: 400px;
+           
+        }
     }
 
     svg {
