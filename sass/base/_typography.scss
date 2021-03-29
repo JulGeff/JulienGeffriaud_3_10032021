@@ -44,11 +44,23 @@ footer h3 {
     font-family: "robotoregular";
 }
 
+#index_header {
+    h2 {
+        font-weight:bold;
+    }
+
+    h3 {
+        font-weight:normal;
+    }
+}
+
 .menu {
-    h3,
-    p {
-        
-        font-size: $font-size-small;
+    h1 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: $font-size-normal;
+        margin: 0;
     }
 
     h2 {
@@ -56,10 +68,12 @@ footer h3 {
         font-size: $font-size-normal;
         font-weight: normal;
     }
+
+    p {
+        font-size: $font-size-small;
+    }
 }
 
-
-.insert p
-{
+.insert p {
     font-weight: bold;
 }
