@@ -263,10 +263,11 @@ footer a {
   color: white;
 }
 
-/*.accueil {
-    animation: body-appearance 0 backwards;
-    animation-delay: $anim-big-delay + $anim-delay;
-}*/
+.accueil {
+  animation: body-appearance 0 backwards;
+  animation-delay: 3s;
+}
+
 #fonctionnement svg {
   height: 15px;
   padding-left: 5%;
@@ -723,33 +724,31 @@ footer a {
   margin: 0;
 }
 
-/*.loader {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 50%;
-    height: 5%;
-    border: $color-secondary solid 2px;
-    z-index: -999999;
-    opacity: 0;
-    animation: loader $anim-big-delay + $anim-delay backwards;
-
-    &__bar {
-        background: linear-gradient($gradient-deg, $color-primary, $color-secondary);
-        animation: progress-bar $anim-big-delay $anim-delay backwards;
-        transform-origin: left;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        margin: 3px;
-        opacity: 0;
-    }
+.loader {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 50%;
+  height: 5%;
+  border: #9356dc solid 2px;
+  z-index: -999999;
+  opacity: 0;
+  animation: loader 3s backwards;
 }
-*/
+.loader__bar {
+  background: linear-gradient(160deg, #ff79da, #9356dc);
+  animation: progress-bar 2.5s 0.5s backwards;
+  transform-origin: left;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 1.2%;
+  opacity: 0;
+}
 
 /*# sourceMappingURL=style.css.map */
