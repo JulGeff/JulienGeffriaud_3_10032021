@@ -193,11 +193,13 @@ a {
 }
 
 .menu_header {
+  background-color: white;
   position: relative;
 }
 .menu_header div {
-  display: block;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: white;
 }
 .menu_header img {
   height: 230px;
@@ -207,7 +209,7 @@ a {
 .menu_header svg {
   width: 20px;
   position: absolute;
-  top: 6px;
+  top: 25px;
   left: 20px;
 }
 
