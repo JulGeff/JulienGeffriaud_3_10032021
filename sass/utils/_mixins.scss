@@ -16,6 +16,7 @@
         margin-top: $margin-padding-default;
         margin-bottom: $margin-padding-default;
         width: 30%;
+        font-size: $font-size-mediumplus;
     }
     @media screen and (min-width: map-get($breakpoints, tablet-landscape)) {
         width: 20%;
